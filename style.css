@@ -6,19 +6,27 @@
 
 body {
     display: flex;
-    justify-content: center;
+    
+    align-items: center;
     background-color: black;
     min-height: 100vh;
     padding: 10px;
+    flex-direction: column;
 }
 
-main {
+main,
+header {
     display: flex;
     flex-direction: column;
     max-width: 1000px;
     width: 100%;
     padding: 15px;
     gap: 30px;
+}
+h1{
+    color: white;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 .search-div {
@@ -177,15 +185,15 @@ p {
     }
     
     img {
-        height: 160px;
+        height: 200px;
     }
     
     h2 {
-        font-size: 16px;
+        font-size: 18px;
     }
     
     p {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
