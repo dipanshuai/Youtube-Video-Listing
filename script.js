@@ -30,8 +30,16 @@ function filterVideoCards() {
 
     videoCards.forEach(card => {
         const cardTags = card.getAttribute("tags");
-        // Safely check if cardTags exists and includes the search term
-        if (cardTags && cardTags.toLowerCase().includes(searchTerm)) {
+        // Get title for matching - selecting the element with class "video-title"
+        const titleElement = card.querySelector(".video-title");
+        const cardTitle = titleElement ? titleElement.textContent.toLowerCase() : "";
+        
+        // Check if either tags or title contain the search term
+        const tagsMatch = cardTags && cardTags.toLowerCase().includes(searchTerm);
+        const titleMatch = cardTitle && cardTitle.includes(searchTerm);
+        
+        // Show card if either tags or title match the search term
+        if (tagsMatch || titleMatch) {
             card.className = "video-card-single";
             matchFound = true;
         } else {
