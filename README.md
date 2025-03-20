@@ -7,6 +7,7 @@
 2. Shows video thumbnail, titles, channel name and views
 3. Click on the title or thumbnail to go to videos
 4. Search bar with search and clear search button (no API calls)
+5. Search functionality based on title and video tags from api
 ![image](/search.png)
 
 5. Responsive on all devices
